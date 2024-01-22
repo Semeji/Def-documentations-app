@@ -1,9 +1,17 @@
+import React from "react";
 import Authentification from "./pages/Authentification.jsx";
 import Comptabilité from "./pages/Comptabilité.jsx";
 import Administrateur from "./pages/Administrateur.jsx";
 import Fiscalité from "./pages/Fiscalité.jsx";
 import Personnel from "./pages/Personnel.jsx";
 import Stock from "./pages/Stock.jsx";
+import Layout from "./components/Layout.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ReactDOM from "react-dom/client";
+import("./styles/App.css");
+import("./styles/index.css");
+
+
 
 const router = createBrowserRouter([
   {
@@ -11,7 +19,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: "/",
+        path: "/authentification",
         element: <Authentification />,
       },
       {
@@ -31,7 +39,7 @@ const router = createBrowserRouter([
         element: <Personnel />,
       },
       {
-        path: "/Personnel",
+        path: "/stock",
         element: <Stock />,
       },
     ],

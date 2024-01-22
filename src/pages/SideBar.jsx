@@ -2,10 +2,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 function SideBar() {
+  
   return (
     <div className="sideBar-container">
       <a href="#">
-        <img src={g} alt="DGI LOGO" />
+        {/* <img src={} alt="DGI LOGO" /> */}
       </a>
       <ul className="page-title nav-limk">
         <li>
@@ -14,31 +15,31 @@ function SideBar() {
               <h2>Authentification</h2>
               <ul>
                 <li>
-                  <a href="#Préambule"></a>
+                  <a href="#Préambule">Préambule</a>
                 </li>
                 <li>
-                  <a href="#Accès au système"></a>
+                  <a href="#Accès au système">Accès au système</a>
                 </li>
                 <li>
-                  <a href="#Création d’un compte"></a>
+                  <a href="#Création d’un compte">Création d’un compte</a>
                 </li>
                 <li>
-                  <a href="#Procédures à suivre "></a>
+                  <a href="#Procédures à suivre ">Procédures à suivre</a>
                 </li>
                 <li>
-                  <a href="#Création de l’espace de travail"></a>
+                  <a href="#Création de l’espace de travail">Création de l’espace de travail</a>
                 </li>
                 <li>
-                  <a href="#Choix de la catégorie de l’assujetti"></a>
+                  <a href="#Choix de la catégorie de l’assujetti">Choix de la catégorie de l’assujetti</a>
                 </li>
                 <li>
-                  <a href="#Personne physique"></a>
+                  <a href="#Personne physique">Personne physique</a>
                 </li>
                 <li>
-                  <a href="#Personne morale"></a>
+                  <a href="#Personne morale">Personne morale</a>
                 </li>
                 <li>
-                  <a href="#Connexion au système"></a>
+                  <a href="#Connexion au système">Connexion au système</a>
                 </li>
               </ul>
             </div>

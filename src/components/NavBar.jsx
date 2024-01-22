@@ -2,8 +2,8 @@ import React from "react";
 
 const NavBar = () => {
   return (
-    <nav className="navBar">
-      <ul>
+    <nav >
+      <ul className="navBar">
         <li>
           <a href="#">Guide utilisateur</a>
         </li>
