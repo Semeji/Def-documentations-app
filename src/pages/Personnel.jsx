@@ -3,9 +3,12 @@ import React from 'react';
 
 const Personnel = () => {
   return (
-      <h1>
-        Personnel
-      </h1>
+    <div className="Authentification">
+
+    <h2>
+      Personnel
+    </h2>
+    </div>
 
   )
 };

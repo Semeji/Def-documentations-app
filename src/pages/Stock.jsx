@@ -3,7 +3,12 @@ import React from "react";
 const Stock = () => {
   return (
     <>
-      <h1>Stock</h1>
+      <div className="Authentification">
+
+      <h2>
+        Stock
+      </h2>
+      </div>
     </>
   )
 };

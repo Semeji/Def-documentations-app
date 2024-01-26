@@ -3,9 +3,13 @@ import React from 'react';
 
 const Administrateur = () => {
   return (
-      <h1>
+    <div className="Authentification">
+
+      <h2>
         Administrateur
-      </h1>
+      </h2>
+      </div>
+
 
   );
 }

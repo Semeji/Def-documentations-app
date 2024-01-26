@@ -1,45 +1,70 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import searchIcon from "../images/SearchIcon.png";
+import logoDGI from"../images/logoDGI.svg";
+
 
 function SideBar() {
-  
   return (
     <div className="sideBar-container">
+
+      <div className="sideBar-header">    
       <a href="#">
-        {/* <img src={} alt="DGI LOGO" /> */}
+        <img src={logoDGI} alt="DGI LOGO" />
       </a>
+        <div className="sideBarBtn-search">
+        <img src={searchIcon} alt="Tweet Repost" />
+        <input type='text' placeholder='Search pages' />
+      </div>
+        </div>
+
       <ul className="page-title nav-limk">
         <li>
-          <NavLink to="/authentification">
+          <NavLink to="/authentification" onclick={
+          ()=> {style={color:"red"}}
+                      }>
             <div className="nav-limk">
-              <h2>Authentification</h2>
+              <p>Authentification</p>
               <ul>
                 <li>
-                  <a href="#Préambule">Préambule</a>
+                  <NavLink to="/authentification/Préambule"> Préambule</NavLink>
+                  
                 </li>
                 <li>
-                  <a href="#Accès au système">Accès au système</a>
+                  <NavLink to="/authentification/Accès">
+                    Accès au système
+                  </NavLink>
                 </li>
                 <li>
-                  <a href="#Création d’un compte">Création d’un compte</a>
+                  <NavLink to="/authentification/Création">
+                    Création d’un compte
+                  </NavLink>
                 </li>
                 <li>
-                  <a href="#Procédures à suivre ">Procédures à suivre</a>
+                  <NavLink to="/authentification/Procédures">
+                    Procédures à suivre
+                  </NavLink>
+                </li>
+                {/* <li> */}
+                  {/* <NavLink to="/Création de l’espace de travail">
+                    Création de l’espace de travail
+                  </NavLink>
                 </li>
                 <li>
-                  <a href="#Création de l’espace de travail">Création de l’espace de travail</a>
+                  <NavLink to="/Choix de la catégorie de l’assujetti">
+                    Choix de la catégorie de l’assujetti
+                  </NavLink>
                 </li>
                 <li>
-                  <a href="#Choix de la catégorie de l’assujetti">Choix de la catégorie de l’assujetti</a>
+                  <NavLink to="/Personne physique">Personne physique</NavLink>
                 </li>
                 <li>
-                  <a href="#Personne physique">Personne physique</a>
-                </li>
+                  <NavLink to="/Personne morale">Personne morale</NavLink>
+                </li> */}
                 <li>
-                  <a href="#Personne morale">Personne morale</a>
-                </li>
-                <li>
-                  <a href="#Connexion au système">Connexion au système</a>
+                  <NavLink to="/authentification/Connexion">
+                    Connexion au système
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -48,31 +73,31 @@ function SideBar() {
 
         <li>
           <NavLink to="/administrateur">
-            <h2>Administrateur</h2>
+            <p>Administrateur</p>
           </NavLink>
         </li>
 
         <li>
           <NavLink to="/comptabilité">
-            <h2>Comptabilité</h2>
+            <p>Comptabilité</p>
           </NavLink>
         </li>
 
         <li>
           <NavLink to="/Fiscalité">
-            <h2>Fiscalité</h2>
+            <p>Fiscalité</p>
           </NavLink>
         </li>
 
         <li>
           <NavLink to="/personnel">
-            <h2>Personnel</h2>
+            <p>Personnel</p>
           </NavLink>
         </li>
 
         <li>
           <NavLink to="/stock">
-            <h2>Stock</h2>
+            <p>Stock</p>
           </NavLink>
         </li>
       </ul>
