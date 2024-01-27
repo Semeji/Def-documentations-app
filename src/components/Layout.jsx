@@ -6,10 +6,10 @@ import SideBar from "../pages/SideBar.jsx";
 
 
 
-const Layout = () => {
+const Layout = ({isDarkMode}) => {
   return (
     <>
-      <div className="layout" >
+      <div className={`index ${isDarkMode ? 'dark-mode' : 'layout'}`} >
     <div className="layout-container" >
       <SideBar />
       <NavBar />

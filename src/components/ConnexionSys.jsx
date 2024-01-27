@@ -1,10 +1,12 @@
 import React from "react";
+import Connexion from "../images/Connexion.png";
+
 
 const NavBar = () => {
-  const capture = "ma capture";
+  
   return (
     <section className="Section-paragraph">
-      <h2 id="Connexion au système">Connexion au système</h2>
+      <h2 id="Connexion">Connexion au système</h2>
       <div className="Content">
 
       <p>
@@ -13,7 +15,7 @@ const NavBar = () => {
         respectivement dans les champs cidessous pour se connecter
       </p>
 
-        <img src={capture} alt="Capture" width="50" height="100" />
+        <img src={Connexion} alt="Capture" width="500" height="500" />
       </div>
     </section>
   );

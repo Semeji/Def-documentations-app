@@ -1,31 +1,44 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import searchIcon from "../images/SearchIcon.png";
-import logoDGI from"../images/logoDGI.svg";
+import logo from"../images/logo.svg";
+import  { useState } from 'react';
 
 
 function SideBar() {
+  const [isClicked, setIsClicked] = useState(false);
+  const handleMenuClick = () => {
+    setIsClicked(!isClicked);
+  };
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+  // const handleLinkClick = () => {
+  //   const element = document.getElementById('Connexion');
+  //   element.scrollIntoView({ behavior: 'smooth' });
+  // };
   return (
     <div className="sideBar-container">
 
       <div className="sideBar-header">    
       <a href="#">
-        <img src={logoDGI} alt="DGI LOGO" />
+        <img src={logo} alt="DGI LOGO" />
       </a>
+        <button className="Dark-mode" onClick={toggleDarkMode}>
+          changer de mode </button>
         <div className="sideBarBtn-search">
-        <img src={searchIcon} alt="Tweet Repost" />
+        <img src={searchIcon} alt="Seach Icon  " />
         <input type='text' placeholder='Search pages' />
       </div>
         </div>
 
       <ul className="page-title nav-limk">
         <li>
-          <NavLink to="/authentification" onclick={
-          ()=> {style={color:"red"}}
-                      }>
+          <NavLink to="/authentification">
             <div className="nav-limk">
-              <p>Authentification</p>
-              <ul>
+              <p onClick={handleMenuClick}>Authentification</p>
+              {isClicked && (<ul>
                 <li>
                   <NavLink to="/authentification/Préambule"> Préambule</NavLink>
                   
@@ -62,15 +75,17 @@ function SideBar() {
                   <NavLink to="/Personne morale">Personne morale</NavLink>
                 </li> */}
                 <li>
-                  <NavLink to="/authentification/Connexion">
+                  <NavLink  to="/authentification/Connexion" >
                     Connexion au système
                   </NavLink>
                 </li>
-              </ul>
+                
+              </ul>)}
             </div>
           </NavLink>
         </li>
 
+       
         <li>
           <NavLink to="/administrateur">
             <p>Administrateur</p>
