@@ -12,11 +12,11 @@ import DenominationEts from "../images/DenominationEts.png";
 import StatutNotarie from "../images/StatutNotarie.png";
 
 const NavBar = () => {
-  const capture = "ma capture";
+ 
   return (
     <section className="Section-paragraph">
       <div className="Paragraph-Content">
-        <h2 id="Procédures">Procédures à suivre</h2>
+        <h2 id="procédures">Procédures à suivre</h2>
 
         <div className="Content">
           <h2 id="Création de l’espace de travail">

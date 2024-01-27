@@ -6,7 +6,7 @@ const Préambule = () => {
       
       <section className="Section-paragraph">
         <div className="Paragraph-Content">
-          <h2 id="Préambule">Préambule</h2>
+          <h2 id="préambule">Préambule</h2>
           <p>
             En instituant,{" "}
             <strong>

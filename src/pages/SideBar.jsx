@@ -14,10 +14,22 @@ function SideBar() {
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
-  // const handleLinkClick = () => {
-  //   const element = document.getElementById('Connexion');
-  //   element.scrollIntoView({ behavior: 'smooth' });
-  // };
+
+   
+    const handleSidebarMenu= ()=>{const SidebarMenu = document.getElementById(
+        "SidebarMenu");
+    if (window.scrollY > 0) {
+          SidebarMenu.classList.add('scrolled');
+    } else {
+          SidebarMenu.classList.remove('scrolled');
+    }
+  };
+
+  const handleLinkClick = (section) => {
+    const element = document.getElementById(section);
+    element.scrollIntoView({ behavior: 'smooth' });
+    
+  };
   return (
     <div className="sideBar-container">
 
@@ -25,7 +37,7 @@ function SideBar() {
       <a href="#">
         <img src={logo} alt="DGI LOGO" />
       </a>
-        <button className="Dark-mode" onClick={toggleDarkMode}>
+        <button className="Dark-mode-button" onClick={toggleDarkMode}>
           changer de mode </button>
         <div className="sideBarBtn-search">
         <img src={searchIcon} alt="Seach Icon  " />
@@ -37,49 +49,66 @@ function SideBar() {
         <li>
           <NavLink to="/authentification">
             <div className="nav-limk">
-              <p onClick={handleMenuClick}>Authentification</p>
+              <p onClick={handleMenuClick} id='sidebar-menu' >Authentification</p>
               {isClicked && (<ul>
+                <li> 
+                 <NavLink to= "/authentification"
+                onClick={() => handleLinkClick('préambule')}>Préambule
+                 </NavLink>
+                  </li>
                 <li>
-                  <NavLink to="/authentification/Préambule"> Préambule</NavLink>
                   
+                  <NavLink to= "/authentification"
+                    onClick={() => handleLinkClick('Accès-système')}>Accès au système
+                     </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/authentification/Accès">
-                    Accès au système
-                  </NavLink>
+                  <NavLink to= "/authentification"
+                    onClick={() => handleLinkClick('Création-de-compte')}>Création de compte
+                     </NavLink>
+              
                 </li>
                 <li>
-                  <NavLink to="/authentification/Création">
-                    Création d’un compte
-                  </NavLink>
+                  <NavLink to= "/authentification"
+                    onClick={() => {handleLinkClick('procédures'); ()=> handleMenuClick()} }>Procédures à suivre
+                     </NavLink>
+                </li>
+                {isClicked && ( <ul> 
+      <li>
+        <NavLink to= "/authentification"
+          onClick={() => handleLinkClick('Création-espace-travail')}>Création de l'espace de travail
+           </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/authentification/Procédures">
-                    Procédures à suivre
-                  </NavLink>
+                  <NavLink to= "/authentification"
+                    onClick={() => handleLinkClick('Choix-catégorie-assujetti')}>Choix de catégorie de l’assujetti
+                     </NavLink>
                 </li>
-                {/* <li> */}
-                  {/* <NavLink to="/Création de l’espace de travail">
-                    Création de l’espace de travail
-                  </NavLink>
-                </li>
+                  
+              
                 <li>
-                  <NavLink to="/Choix de la catégorie de l’assujetti">
-                    Choix de la catégorie de l’assujetti
-                  </NavLink>
-                </li>
+                  <NavLink to= "/authentification"
+                    onClick={() => handleLinkClick('Personne-physique')}>Personne physique
+                     </NavLink>
+                  </li>
+
+                  <li>
+                  <NavLink to= "/authentification"
+                    onClick={() => handleLinkClick('Personne-morale')}>Personne morale
+                     </NavLink>
+                  </li>
+
+                  </ul>)}
+                  
                 <li>
-                  <NavLink to="/Personne physique">Personne physique</NavLink>
+                  
+                  <NavLink to= "/authentification"
+  onClick={() => handleLinkClick('connexion')}>
+                     Connexion au système
+
+                   </NavLink>
                 </li>
-                <li>
-                  <NavLink to="/Personne morale">Personne morale</NavLink>
-                </li> */}
-                <li>
-                  <NavLink  to="/authentification/Connexion" >
-                    Connexion au système
-                  </NavLink>
-                </li>
-                
+              
               </ul>)}
             </div>
           </NavLink>

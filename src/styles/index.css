@@ -1,11 +1,15 @@
 *{
-  
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
    color: #5a5858;
   }
+
+.dark-mode{
+  background:black;
+  color:white;
+}
 input{
   background:white;
-  color:#0a0a0a;
+  color:#5a5858
   border:none;
   padding:5px;
   
@@ -13,7 +17,7 @@ input{
   ul,a {
     list-style-type: none;
     text-decoration: none;
-     color:darkblue;
+     color:black;
   }
 ul li navLink{
    color: black;
@@ -124,7 +128,6 @@ main-content{
   gap:50px;
 }
 
-.dark-mode{
-  background:black;
-  color:white;
+#Sidebar-Menu {
+  color:darkred;
 }
