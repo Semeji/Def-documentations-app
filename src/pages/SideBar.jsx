@@ -4,15 +4,9 @@ import searchIcon from "../images/SearchIcon.png";
 import logo from "../images/logo.svg";
 import lOGODGI from "../images/LogoDGI.svg";
 import { useState } from "react";
-import MenuBurger from "../components/MenuBurger.jsx";
 
 function SideBar() {
-  const [IsShownBurger, setIsShownBurger] = useState(false);
-
-  const handleShowBurger = () => {
-    setIsShownBurger(!IsShownBurger);
-  };
-  const [isClicked, setIsClicked] = useState(true);
+  const [isClicked, setIsClicked] = useState(false);
   const handleMenuClick = () => {
     setIsClicked(!isClicked);
   };
@@ -48,7 +42,7 @@ function SideBar() {
   const navLink = document.querySelector("#préambule");
 
   // Ajoutez un écouteur d'événement pour détecter le scroll de la page
-  window.addEventListener("scroll", () => {
+  const handleScroll = document.addEventListener("scroll", () => {
     // Récupérez la position de l'élément par rapport au haut de la page
     // const position =
     //   PageTitle.getBoundingClientRect().getAttribute("préambule");
@@ -56,7 +50,7 @@ function SideBar() {
     // Vérifiez si l'élément est à l'endroit souhaité
     if (pageTitle.id === navLink.id) {
       // Ajoutez une classe CSS pour changer la couleur du navLink
-      navLink.classList.add("text-red-700");
+      navLink.classList.add("text-black-700");
     } else {
       // Supprimez la classe CSS pour rétablir la couleur par défaut du navLink
       navLink.classList.remove("text-lime-600");
@@ -69,8 +63,8 @@ function SideBar() {
 
   return (
     <div
-      className={`flex align-center flex-col text-black border-r-2 border-neutral-300 gap-3 px-1 w-screen h-screen w-[20%]  ${
-        IsShownBurger ? "showBar" : "hide-Bar"
+      className={`flex align-center flex-col text-black border-r-2 border-neutral-300 gap-3 px-1 w-screen h-screen w-[20%] px-8 font-mono sideBar-link ${
+        isClicked ? "sideBar-link" : "hide-Bar"
       }`}
     >
       <div className="sideBar-header  ">
@@ -106,11 +100,11 @@ function SideBar() {
         </div>
       </div>
 
-      <ul className="sideBar-link  ">
+      <ul className="sideBar-link  nav-limks ">
         <a className="logo hidden" href="#">
           <img src={lOGODGI} alt="DGI LOGO" />
         </a>
-        <MenuBurger />
+
         <li>
           <NavLink to="/authentification">
             <div className="nav-limk">
@@ -127,6 +121,7 @@ function SideBar() {
                       to="/authentification"
                       onClick={() => handleLinkClick("préambule")}
                       id="préambule"
+                      onScroll={handleScroll}
                     >
                       Préambule
                     </NavLink>
