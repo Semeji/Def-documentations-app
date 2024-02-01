@@ -9,12 +9,17 @@ import Layout from "./components/Layout.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import("./styles/App.css");
-import("./styles/index.css");
+// import("./styles/style.css");
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: (
+      <h1 className="text-center text-red-700">
+        Désolé Cette page n'existe pas
+      </h1>
+    ),
     children: [
       {
         path: "/authentification",
@@ -46,25 +51,22 @@ const router = createBrowserRouter([
         element: (
           <h2 id="Création-espace-travail">Création de l'espace de travail</h2>
         ),
-      }, 
+      },
       {
         path: "/authentification",
-        element: <h2 id="Choix-catégorie-assujetti">Choix de droit d'assujetti</h2>,
+        element: (
+          <h2 id="Choix-catégorie-assujetti">Choix de droit d'assujetti</h2>
+        ),
       },
-     
+
       {
-           path: "/authentification",
-         element: <h2 id="Personne-physique">Personne physique</h2>
-
-
-       },
+        path: "/authentification",
+        element: <h2 id="Personne-physique">Personne physique</h2>,
+      },
       {
-           path: "/authentification",
-         element: <h2 id="Personne-morale">Personne morale</h2>
-
-
-       },
-      
+        path: "/authentification",
+        element: <h2 id="Personne-morale">Personne morale</h2>,
+      },
 
       {
         path: "/administrateur",

@@ -1,10 +1,16 @@
-/** @type {import('tailwindcss').Config} */
+/*/** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {},
   },
   plugins: [],
+  screens: {
+    sm: "640px",
+    md: "1024px",
+    lg: "1280px",
+  },
+
 
   colors: {
     primary: "#0D247F",
@@ -37,7 +43,6 @@ export default {
     gray3: "#757986",
     gray4: "#656565",
     backdrop: "#0000009c",
-    mainBackground: "#dadde7"
+    mainBackground: "#dadde7",
   },
-}
-
+};

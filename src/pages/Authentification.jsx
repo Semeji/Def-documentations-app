@@ -12,45 +12,50 @@ import DenominationEts from "../images/DenominationEts.png";
 import StatutNotarie from "../images/StatutNotarie.png";
 import Connexion from "../images/Connexion.png";
 
-
-const Authentification = ({handleSidebarMenu}) => {
-  
+const Authentification = ({ handleSidebarMenu }) => {
   return (
     <>
-      <div className="Authentification">
-        
-
-        <section className="Section-paragraph" id="préambule">
-          <div className="Paragraph-Content">
-            <h2 id="préambule" onScroll={() => handleSidebarMenu('SidebarMenu')}>Préambule</h2>
+      <div className="Authentification flex justify-between flex-col gap-5 px-5 h-full">
+        <section
+          className="flex justify-between flex-col mx-10 border-b-2 border-neutral-300"
+          id="préambule"
+        >
+          <div className="">
+            <h2
+              className="bold text-2xl text-blue-700"
+              id="préambule"
+              onScroll={() => handleSidebarMenu("SidebarMenu")}
+            >
+              Préambule
+            </h2>
             <p>
               En instituant,{" "}
               <strong>
                 {" "}
-                par l’article 35 de la loi de finances n° 17/005 du 23 juin 2017,
-                pour l’exercice 2017, un mécanisme électronique de capture
-                automatique des transactions, et notamment d’émission automatisée
-                de la facture commerciale (TVA),{" "}
+                par l’article 35 de la loi de finances n° 17/005 du 23 juin
+                2017, pour l’exercice 2017, un mécanisme électronique de capture
+                automatique des transactions, et notamment d’émission
+                automatisée de la facture commerciale (TVA),{" "}
               </strong>
               le droit fiscal congolais a introduit l’informatisation
               (numérisation) dans la gestion comptable et fiscale, par les
-              assujettis, des données comptables (la facture notamment) conduisant
-              aussi bien à la saisie et à la cristallisation des données
-              comptables qu’au calcul exact des impôts, taxes, redevances et
-              autres droits dus au Trésor public qui en résultent.
+              assujettis, des données comptables (la facture notamment)
+              conduisant aussi bien à la saisie et à la cristallisation des
+              données comptables qu’au calcul exact des impôts, taxes,
+              redevances et autres droits dus au Trésor public qui en résultent.
             </p>
 
             <p>
               Aussi la SBN-SBS, Centre congolais de Recherche en Informatique
               Appliquée, a mis au point une solution numérique comptable et
-              fiscale, sous forme de plateforme numérique, laquelle dématérialise
-              toutes les procédures comptables & fiscales, rendant intangibles les
-              données y relatives, en vue de la collecte optimale des impôts,
-              taxes, redevances et droits dus au Trésor qui y correspondent.
-              L’invention de la SBN-SBS tient donc lieu de{" "}
+              fiscale, sous forme de plateforme numérique, laquelle
+              dématérialise toutes les procédures comptables & fiscales, rendant
+              intangibles les données y relatives, en vue de la collecte
+              optimale des impôts, taxes, redevances et droits dus au Trésor qui
+              y correspondent. L’invention de la SBN-SBS tient donc lieu de{" "}
               <strong>
-                Dispositif Électronique Fiscal (DEF) édicté par les textes de loi
-                susmentionnés et qui mentionnent ce qui suit ;{" "}
+                Dispositif Électronique Fiscal (DEF) édicté par les textes de
+                loi susmentionnés et qui mentionnent ce qui suit ;{" "}
               </strong>
             </p>
 
@@ -58,21 +63,22 @@ const Authentification = ({handleSidebarMenu}) => {
               <strong>
                 <em> Article 59 ter </em>{" "}
               </strong>
-              de l’ordonnance-Loi n°10/001 du 20 août 2010 portant institution de
-              la taxe sur la valeur ajoutée stipule :
+              de l’ordonnance-Loi n°10/001 du 20 août 2010 portant institution
+              de la taxe sur la valeur ajoutée stipule :
               <strong>
                 <em>
                   {" "}
                   « Les personnes physiques ou morales assujetties à la taxe sur
-                  la valeur ajoutée sont tenues, dans les conditions précisées par
-                  voie réglementaire, de se faire enregistrer auprès de
-                  l’Administration des Impôts comme utilisatrices des dispositifs
-                  électroniques fiscaux. », et de poursuivre « Par dispositifs
-                  électroniques fiscaux, il faut entendre des appareils
-                  électroniques dont les spécifications techniques sont définies
-                  par l’Administration des Impôts et qui sont fabriqués pour être
-                  utilisés par les personnes physiques ou morales assujetties à la
-                  taxe sur la valeur ajoutée dans leurs transactions. ».{" "}
+                  la valeur ajoutée sont tenues, dans les conditions précisées
+                  par voie réglementaire, de se faire enregistrer auprès de
+                  l’Administration des Impôts comme utilisatrices des
+                  dispositifs électroniques fiscaux. », et de poursuivre « Par
+                  dispositifs électroniques fiscaux, il faut entendre des
+                  appareils électroniques dont les spécifications techniques
+                  sont définies par l’Administration des Impôts et qui sont
+                  fabriqués pour être utilisés par les personnes physiques ou
+                  morales assujetties à la taxe sur la valeur ajoutée dans leurs
+                  transactions. ».{" "}
                 </em>{" "}
               </strong>
             </p>
@@ -82,8 +88,8 @@ const Authentification = ({handleSidebarMenu}) => {
                 {" "}
                 <em> Article 59 quater </em>{" "}
               </strong>
-              de l’ordonnance-Loi n°10/001 du 20 août 2010 portant institution de
-              la taxe sur la valeur ajoutée stipule ;{" "}
+              de l’ordonnance-Loi n°10/001 du 20 août 2010 portant institution
+              de la taxe sur la valeur ajoutée stipule ;{" "}
               <strong>
                 {" "}
                 <em>
@@ -92,47 +98,49 @@ const Authentification = ({handleSidebarMenu}) => {
                   la valeur ajoutée sont tenues d’utiliser les dispositifs
                   électroniques fiscaux connectés au système informatique de
                   l’Administration des Impôts pour (1) la collecte et la gestion
-                  des données de la taxe sur la valeur ajoutée sur les opérations
-                  réalisées, (2) délivrer une facture produite automatiquement par
-                  l’appareil électronique fiscal lors de chaque transaction et (3)
-                  veiller à la transmission électronique, à la fin de la journée,
-                  de toutes les transactions réalisées vers ledit système
-                  informatique.».
+                  des données de la taxe sur la valeur ajoutée sur les
+                  opérations réalisées, (2) délivrer une facture produite
+                  automatiquement par l’appareil électronique fiscal lors de
+                  chaque transaction et (3) veiller à la transmission
+                  électronique, à la fin de la journée, de toutes les
+                  transactions réalisées vers ledit système informatique.».
                 </em>{" "}
               </strong>
             </p>
 
             <p>
-              Au départ, ce Dispositif Electronique Fiscal ne devrait permettre à
-              l’État congolais que de capturer la facture et les données de la
+              Au départ, ce Dispositif Electronique Fiscal ne devrait permettre
+              à l’État congolais que de capturer la facture et les données de la
               transaction dont recèle ce document comptable stratégique, la
-              facture. Ensuite, d’après la loi, le Dispositif Electronique Fiscal
-              ferait la gestion des données renseignées dans la facture (noms des
-              co-contractants, le vendeur-fournisseur et l’acheteur-client), flux
-              réels (marchandises achetées et vendues), flux financiers (prix payé
-              et encaissé), frais accessoires à l’échange (achat et vente),
-              conditions de l’échange (comptant, à tempérament ou à crédit), taxes
-              autres que la TVA affectant la transaction, et plusieurs autres
-              informations (rabais, remise et ristournes consentis), et, enfin, la
-              TVA elle-même. L’ensemble de ces éléments concourent à la gestion
-              optimale de la TVA mais aussi des autres impôts tels l’Impôt sur les
-              bénéfices et profits (IBP).
+              facture. Ensuite, d’après la loi, le Dispositif Electronique
+              Fiscal ferait la gestion des données renseignées dans la facture
+              (noms des co-contractants, le vendeur-fournisseur et
+              l’acheteur-client), flux réels (marchandises achetées et vendues),
+              flux financiers (prix payé et encaissé), frais accessoires à
+              l’échange (achat et vente), conditions de l’échange (comptant, à
+              tempérament ou à crédit), taxes autres que la TVA affectant la
+              transaction, et plusieurs autres informations (rabais, remise et
+              ristournes consentis), et, enfin, la TVA elle-même. L’ensemble de
+              ces éléments concourent à la gestion optimale de la TVA mais aussi
+              des autres impôts tels l’Impôt sur les bénéfices et profits (IBP).
             </p>
 
             <p>
               <strong>
                 {" "}
-                Il appert que, à ce jour, le Centre de Recherche SBN-SBS a étendu
-                la gestion, en la dématérialisant, à toutes les données dérivées
-                de la facture
+                Il appert que, à ce jour, le Centre de Recherche SBN-SBS a
+                étendu la gestion, en la dématérialisant, à toutes les données
+                dérivées de la facture
               </strong>{" "}
               et documents qui en tiennent lieu (quittance, …){" "}
               <strong>à la constatation </strong>(matières et bases imposables),{" "}
-              <strong>à la liquidation</strong> (calcul des droits dus au Trésor),
+              <strong>à la liquidation</strong> (calcul des droits dus au
+              Trésor),
               <strong> à l’ordonnancement</strong> (déclaration des impôts et
-              taxes) <strong>et au paiement</strong> (acquittement des sommes dues
-              au Trésor public, aux Administrations et Etablissements publics, et,
-              enfin, aux entités Territoriales Décentralisés) (les ETD).
+              taxes) <strong>et au paiement</strong> (acquittement des sommes
+              dues au Trésor public, aux Administrations et Etablissements
+              publics, et, enfin, aux entités Territoriales Décentralisés) (les
+              ETD).
             </p>
 
             <p>
@@ -154,23 +162,23 @@ const Authentification = ({handleSidebarMenu}) => {
               </strong>
             </p>
             <p>
-              La dématérialisation intégrale des segments et fonctions comptables
-              ainsi que le calcul automatisé des données comptables de
-              l’entreprise (assujetti) fait de la Solution fiscale SBN-SBS une
-              Solution sûre pour la gestion des entreprises qui en sont
+              La dématérialisation intégrale des segments et fonctions
+              comptables ainsi que le calcul automatisé des données comptables
+              de l’entreprise (assujetti) fait de la Solution fiscale SBN-SBS
+              une Solution sûre pour la gestion des entreprises qui en sont
               utilisatrices et fait respecter{" "}
               <strong>
                 {" "}
-                les normes de la Comptabilité OHADA révisée, la seule actuellement
-                admise en République Démocratique du Congo.{" "}
+                les normes de la Comptabilité OHADA révisée, la seule
+                actuellement admise en République Démocratique du Congo.{" "}
               </strong>
             </p>
             <p>
               <strong>
-                Subséquemment la dématérialisation des segments fiscaux, allant de
-                la déclaration et à l’acquittement (recouvrement), aussi bien de
-                la TVA que des autres impôts, taxes parafiscales, redevances et
-                autres droit dus au Trésor public redent sûrs et certains les
+                Subséquemment la dématérialisation des segments fiscaux, allant
+                de la déclaration et à l’acquittement (recouvrement), aussi bien
+                de la TVA que des autres impôts, taxes parafiscales, redevances
+                et autres droit dus au Trésor public redent sûrs et certains les
                 objectifs techniques et politiques de la mobilisation optimales
                 des impôts, taxes, redevances et autres droits dus au Trésor
                 public.
@@ -178,9 +186,10 @@ const Authentification = ({handleSidebarMenu}) => {
             </p>
 
             <p>
-              Le Centre de recherche SBN-SBS a étendu les fonctions du Dispositif
-              Electronique Fiscal jusqu’au calcul et à l’acquittement automatique
-              de l’IPR et des cotisations sociales (CNSS, INPP et ONEM).
+              Le Centre de recherche SBN-SBS a étendu les fonctions du
+              Dispositif Electronique Fiscal jusqu’au calcul et à l’acquittement
+              automatique de l’IPR et des cotisations sociales (CNSS, INPP et
+              ONEM).
             </p>
 
             <p>
@@ -194,8 +203,8 @@ const Authentification = ({handleSidebarMenu}) => {
             </p>
 
             <p>
-              Le modèle de Dispositif Electronique Fiscal proposé par le Centre de
-              Recherche SBN-SBS permet de{" "}
+              Le modèle de Dispositif Electronique Fiscal proposé par le Centre
+              de Recherche SBN-SBS permet de{" "}
               <strong> constater tout fait générateur </strong> d’impôt, taxe,
               redevance et droit du au Trésor, aux Administration et
               Etablissements publics, de{" "}
@@ -228,74 +237,65 @@ const Authentification = ({handleSidebarMenu}) => {
             </p>
           </div>
         </section>
-        
-        
-        <section className="Section-paragraph">
-          <div className="Paragraph-Content">
+
+        <section className="Section-paragraph flex justify-between flex-col mx-10 border-b-2 border-neutral-300">
+          <div className="">
             <h2 id="Accès-système">Accès au système</h2>
             <p>
               La solution a l’avantage d’un accès aisé grâce à un lien public,
               d’un enregistrement aisé des utilisateurs personnes physiques et
               morales et du traitement automatique des données liées aux
-              opérations ou procédures énumérées ci-dessus. Pour se connecter à la
-              plate-forme DEF, vous pouvez utiliser n’importe quel navigateur
+              opérations ou procédures énumérées ci-dessus. Pour se connecter à
+              la plate-forme DEF, vous pouvez utiliser n’importe quel navigateur
               (Opéra mini, Fire fox, Chrome...). Le lien d’accès est celui-ci :{" "}
               <a href="https://def-rdc.com">https://def-rdc.com</a>
             </p>
           </div>
         </section>
 
-        
-        
-        <section className="Section-paragraph">
-          <div className="Paragraph-Content">
+        <section className="Section-paragraph flex justify-between flex-col mx-10 border-b-2 border-neutral-300">
+          <div className="">
             <h2 id="Création-de-compte">Création d’un compte</h2>
             <p>
               La Solution offre des interfaces d’enregistrement des nouveaux
-              utilisateurs et leur donne un numéro DEF d’utilisateur et un mot de
-              passe sécurisé par défaut modifiable par l’utilisateur.
+              utilisateurs et leur donne un numéro DEF d’utilisateur et un mot
+              de passe sécurisé par défaut modifiable par l’utilisateur.
             </p>
           </div>
         </section>
-        
-        
-        
-        <section className="Section-paragraph">
+
+        <section className=" flex justify-between flex-col mx-10 border-b-2 border-neutral-300">
           <div className="Paragraph-Content">
             <h2 id="procédures">Procédures à suivre</h2>
 
-            <div className="Content">
+            <div className=" flex justify-between flex-row gap-50">
               <h2 id="Création-espace-travail">
                 Création de l’espace de travail
               </h2>
               <img src={CreateCount} alt="Capture" width="500" height="500" />
             </div>
 
-            <div className="Content">
+            <div className="flex justify-between flex-row gap-50">
               <h2 id="Choix-catégorie-assujetti">
                 Choix de la catégorie de l’assujetti
               </h2>
               <img src={CatAssujetti} alt="Capture" width="500" height="500" />
             </div>
 
-            <div className="Section-paragraph">
+            <div className="flex justify-between flex-col mx-10 border-b-2 border-neutral-300">
               <h2 id="Personne-physique">Personne physique</h2>
               <p>
-                Apres le choix de la catégorie de l’assujetti, si cette dernière est
-                une personne physique (commerçante ou non commerçante) ; il est
-                important de préciser que la procédure est la même.
+                Apres le choix de la catégorie de l’assujetti, si cette dernière
+                est une personne physique (commerçante ou non commerçante) ; il
+                est important de préciser que la procédure est la même.
               </p>
-              <div className="Content">
-                <h3 >
-                  Etape 1 : enregistrement de coordonnées
-                </h3>
+              <div className="flex justify-between flex-row gap-50">
+                <h3>Etape 1 : enregistrement de coordonnées</h3>
                 <img src={StorageData} alt="Capture" width="500" height="500" />
               </div>
 
-              <div className="Content">
-                <h3 >
-                  Etape 2: choix de la nationalité
-                </h3>
+              <div className="flex justify-between flex-row gap-50">
+                <h3>Etape 2: choix de la nationalité</h3>
                 <img
                   src={SelectNationnality}
                   alt="Capture"
@@ -304,10 +304,8 @@ const Authentification = ({handleSidebarMenu}) => {
                 />
               </div>
 
-              <div className="Content">
-                <h3 >
-                  Assujetti de droit congolais
-                </h3>
+              <div className="flex justify-between flex-row gap-50">
+                <h3>Assujetti de droit congolais</h3>
                 <img
                   src={AssujettiCongolais}
                   alt="Capture"
@@ -316,10 +314,8 @@ const Authentification = ({handleSidebarMenu}) => {
                 />
               </div>
 
-              <div className="Content">
-                <h3 >
-                  Assujetti de droit Etranger
-                </h3>
+              <div className="flex justify-between flex-row gap-50">
+                <h3>Assujetti de droit Etranger</h3>
                 <img
                   src={AssujettiEtranger}
                   alt="Capture"
@@ -328,10 +324,8 @@ const Authentification = ({handleSidebarMenu}) => {
                 />
               </div>
 
-              <div className="Content">
-                <h3 >
-                  Etape 3 : Déclinaison de l'identité de la personne
-                </h3>
+              <div className="flex justify-between flex-row gap-50">
+                <h3>Etape 3 : Déclinaison de l'identité de la personne</h3>
                 <img
                   src={IdentitéPersonnelle}
                   alt="Capture"
@@ -340,31 +334,30 @@ const Authentification = ({handleSidebarMenu}) => {
                 />
               </div>
               <p>
-                N.B : Après avoir soumis le formulaire, le système génère de manière
-                automatique le nom d’utilisateur et le mot de passe par défaut après
-                l’enregistrement via l’adresse mail renseignée à l’étape 1.
+                N.B : Après avoir soumis le formulaire, le système génère de
+                manière automatique le nom d’utilisateur et le mot de passe par
+                défaut après l’enregistrement via l’adresse mail renseignée à
+                l’étape 1.
               </p>
             </div>
 
-            <div className="Section-paragraph">
+            <div className="flex justify-between flex-col mx-10 border-b-2 border-neutral-300">
               <h2 id="Personne-morale">Personne morale</h2>
               <p>
-                Apres le choix de la catégorie de l’assujetti, si cette dernière est
-                une personne morale (commerçante ou non commerçante) ; il est
-                important de préciser que la procédure est la même à la première,
-                deuxième et quatrième étape.
+                Apres le choix de la catégorie de l’assujetti, si cette dernière
+                est une personne morale (commerçante ou non commerçante) ; il
+                est important de préciser que la procédure est la même à la
+                première, deuxième et quatrième étape.
               </p>
-              <div className="Content">
+              <div className="flex justify-between flex-row gap-50">
                 <h3 id="Choix de la catégorie de l’assujetti">
                   Etape 1 : enregistrement de coordonnées
                 </h3>
                 <img src={StorageData} alt="Capture" width="500" height="500" />
               </div>
 
-              <div className="Content">
-                <h3 > 
-                  Etape 2: choix de la nationalité
-                </h3>
+              <div className="flex justify-between flex-row gap-50">
+                <h3>Etape 2: choix de la nationalité</h3>
                 <img
                   src={SelectNationnality}
                   alt="Capture"
@@ -373,10 +366,8 @@ const Authentification = ({handleSidebarMenu}) => {
                 />
               </div>
 
-              <div className="Content">
-                <h3 >
-                  Assujetti de droit congolais
-                </h3>
+              <div className="flex justify-between flex-row gap-50">
+                <h3>Assujetti de droit congolais</h3>
                 <img
                   src={AssujettiCongolais}
                   alt="Capture"
@@ -385,10 +376,8 @@ const Authentification = ({handleSidebarMenu}) => {
                 />
               </div>
 
-              <div className="Content">
-                <h3>
-                  Assujetti de droit Etranger
-                </h3>
+              <div className="flex justify-between flex-row gap-50">
+                <h3>Assujetti de droit Etranger</h3>
                 <img
                   src={AssujettiEtranger}
                   alt="Capture"
@@ -397,51 +386,52 @@ const Authentification = ({handleSidebarMenu}) => {
                 />
               </div>
 
-              <div className="Content">
-                <h3 >
-                  Etape 3 : Déclinaison de l'identité de la personne
-                </h3>
-                <div className="Content-image">
+              <div className="flex justify-between flex-row gap-50">
+                <h3>Etape 3 : Déclinaison de l'identité de la personne</h3>
+                <div className="flex justify-between flex-col gap-50-image">
                   <img src={PMC} alt="Capture" width="500" height="500" />
                   <img src={PMNC} alt="Capture" width="500" height="500" />
                 </div>
               </div>
 
-              <div className="Content">
-                <h3 >
-                  Etape 4 : déclinaison de l’identité
-                </h3>
-                <div className="Content-image">
+              <div className="flex justify-between flex-row gap-50">
+                <h3>Etape 4 : déclinaison de l’identité</h3>
+                <div className="flex justify-between flex-col">
                   <img
                     src={DenominationEts}
                     alt="Capture"
                     width="500"
                     height="500"
                   />
-                  <img src={StatutNotarie} alt="Capture" width="500" height="500" />
+                  <img
+                    src={StatutNotarie}
+                    alt="Capture"
+                    width="500"
+                    height="500"
+                  />
                 </div>
               </div>
               <p>
-                N.B : Après avoir soumis le formulaire, le système génère de manière
-                automatique le nom d’utilisateur et le mot de passe par défaut après
-                l’enregistrement via l’adresse mail renseignée à l’étape 1.
+                N.B : Après avoir soumis le formulaire, le système génère de
+                manière automatique le nom d’utilisateur et le mot de passe par
+                défaut après l’enregistrement via l’adresse mail renseignée à
+                l’étape 1.
               </p>
             </div>
           </div>
         </section>
 
-
-        
-        
-        <section className="Section-paragraph" id="connexion">
+        <section
+          className="flex justify-between flex-col mx-10 border-b-2 border-neutral-300"
+          id="connexion"
+        >
           <h2 id="connexion">Connexion au système</h2>
-          <div className="Content">
-
-          <p>
-            Après l’enregistrement dans le DEF, le nom d’utilisateur et le mot de
-            passe par défaut reçus via le mail doivent être renseignés
-            respectivement dans les champs cidessous pour se connecter
-          </p>
+          <div className="flex justify-between flex-row gap-50">
+            <p>
+              Après l’enregistrement dans le DEF, le nom d’utilisateur et le mot
+              de passe par défaut reçus via le mail doivent être renseignés
+              respectivement dans les champs cidessous pour se connecter
+            </p>
 
             <img src={Connexion} alt="Capture" width="500" height="500" />
           </div>
