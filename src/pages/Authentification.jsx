@@ -1,5 +1,5 @@
 import React from "react";
-import CreateCount from "../images/createCount.png";
+import CreateCount from "../images/CreateCount.png";
 import CatAssujetti from "../images/CatAssujetti.png";
 import StorageData from "../images/StorageData.png";
 import SelectNationnality from "../images/SelectNationnality.png";
@@ -12,23 +12,32 @@ import DenominationEts from "../images/DenominationEts.png";
 import StatutNotarie from "../images/StatutNotarie.png";
 import Connexion from "../images/Connexion.png";
 
-const Authentification = ({ handleSidebarMenu }) => {
+const Authentification = () => {
+  const handleScroll = () => {
+    document.addEventListener("scroll", function () {
+      const navLink = document.querySelector(".link");
+      const section = document.querySelector("#préambule");
+      console.log("moi et toi", section);
+      if (window.scrollY > section.offsetTop) {
+        navLink.style.backgroundColor = "red";
+      } else {
+        navLink.style.backgroundColor = "blue";
+      }
+    });
+  };
   return (
     <>
-      <div className="Authentification flex justify-between flex-col gap-5 px-5 h-full">
+      <div className="Authentification flex justify-between flex-col right-0 gap-5 px-5 h-screen w-[55%]">
         <section
-          className="flex justify-between flex-col mx-10 border-b-2 border-neutral-300"
+          className="flex justify-between flex-col mx-5 border-b-2 border-neutral-300"
           id="préambule"
+          onScroll={handleScroll}
         >
           <div className="">
-            <h2
-              className="bold text-2xl text-blue-700"
-              id="préambule"
-              onScroll={() => handleSidebarMenu("SidebarMenu")}
-            >
+            <h2 className="bold text-2xl text-blue-700" id="préambule">
               Préambule
             </h2>
-            <p>
+            <p className="w-[70%]">
               En instituant,{" "}
               <strong>
                 {" "}
@@ -45,7 +54,7 @@ const Authentification = ({ handleSidebarMenu }) => {
               redevances et autres droits dus au Trésor public qui en résultent.
             </p>
 
-            <p>
+            <p className="w-[70%]">
               Aussi la SBN-SBS, Centre congolais de Recherche en Informatique
               Appliquée, a mis au point une solution numérique comptable et
               fiscale, sous forme de plateforme numérique, laquelle
@@ -59,7 +68,7 @@ const Authentification = ({ handleSidebarMenu }) => {
               </strong>
             </p>
 
-            <p>
+            <p className="w-[70%]">
               <strong>
                 <em> Article 59 ter </em>{" "}
               </strong>
@@ -83,7 +92,7 @@ const Authentification = ({ handleSidebarMenu }) => {
               </strong>
             </p>
 
-            <p>
+            <p className="w-[70%]">
               <strong>
                 {" "}
                 <em> Article 59 quater </em>{" "}
@@ -108,7 +117,7 @@ const Authentification = ({ handleSidebarMenu }) => {
               </strong>
             </p>
 
-            <p>
+            <p className="w-[70%]">
               Au départ, ce Dispositif Electronique Fiscal ne devrait permettre
               à l’État congolais que de capturer la facture et les données de la
               transaction dont recèle ce document comptable stratégique, la
@@ -125,7 +134,7 @@ const Authentification = ({ handleSidebarMenu }) => {
               des autres impôts tels l’Impôt sur les bénéfices et profits (IBP).
             </p>
 
-            <p>
+            <p className="w-[70%]">
               <strong>
                 {" "}
                 Il appert que, à ce jour, le Centre de Recherche SBN-SBS a
@@ -143,7 +152,7 @@ const Authentification = ({ handleSidebarMenu }) => {
               ETD).
             </p>
 
-            <p>
+            <p className="w-[70%]">
               <strong>
                 Grâce à ses autres fonctionnalités, le modèle de Dispositif
                 Electronique Fiscal que la SBN-SBS fournit à l’Etat congolais a
@@ -152,7 +161,7 @@ const Authentification = ({ handleSidebarMenu }) => {
               </strong>{" "}
               de manière à leur garantir un traitement comptable automatique, de
               la journalisation à la génération automatique des tableaux
-              comptables périodiques, intérimaires ou de fin d’exercice et
+              comptables périodiques, intérimaires ou de fin dh��exercice et
               notamment du COMPTE DU RESULTAT.
               <strong>
                 {" "}
@@ -161,7 +170,7 @@ const Authentification = ({ handleSidebarMenu }) => {
                 toute manipulation humaine, accidentelle ou frauduleuse.
               </strong>
             </p>
-            <p>
+            <p className="w-[70%]">
               La dématérialisation intégrale des segments et fonctions
               comptables ainsi que le calcul automatisé des données comptables
               de l’entreprise (assujetti) fait de la Solution fiscale SBN-SBS
@@ -173,7 +182,7 @@ const Authentification = ({ handleSidebarMenu }) => {
                 actuellement admise en République Démocratique du Congo.{" "}
               </strong>
             </p>
-            <p>
+            <p className="w-[70%]">
               <strong>
                 Subséquemment la dématérialisation des segments fiscaux, allant
                 de la déclaration et à l’acquittement (recouvrement), aussi bien
@@ -185,14 +194,14 @@ const Authentification = ({ handleSidebarMenu }) => {
               </strong>
             </p>
 
-            <p>
+            <p className="w-[70%]">
               Le Centre de recherche SBN-SBS a étendu les fonctions du
               Dispositif Electronique Fiscal jusqu’au calcul et à l’acquittement
               automatique de l’IPR et des cotisations sociales (CNSS, INPP et
               ONEM).
             </p>
 
-            <p>
+            <p className="w-[70%]">
               Comme susdit, la solution de dématérialisation des procédures
               comptables et fiscales offerte rendraient optimale la collecte des
               tous les impôts perçus par la Direction Générale des Impôts autant
@@ -202,7 +211,7 @@ const Authentification = ({ handleSidebarMenu }) => {
               publics.
             </p>
 
-            <p>
+            <p className="w-[70%]">
               Le modèle de Dispositif Electronique Fiscal proposé par le Centre
               de Recherche SBN-SBS permet de{" "}
               <strong> constater tout fait générateur </strong> d’impôt, taxe,
@@ -226,7 +235,7 @@ const Authentification = ({ handleSidebarMenu }) => {
               bancaire).
             </p>
 
-            <p>
+            <p className="w-[70%]">
               Le déploiement de notre Dispositif Electronique Fiscal pour le
               compte du Trésor public nécessite une logistique simplifié qui ne
               fait pas recours aux coûteuses et relativement peu sures CAISSES
@@ -241,14 +250,16 @@ const Authentification = ({ handleSidebarMenu }) => {
         <section className="Section-paragraph flex justify-between flex-col mx-10 border-b-2 border-neutral-300">
           <div className="">
             <h2 id="Accès-système">Accès au système</h2>
-            <p>
+            <p className="w-[70%]">
               La solution a l’avantage d’un accès aisé grâce à un lien public,
               d’un enregistrement aisé des utilisateurs personnes physiques et
               morales et du traitement automatique des données liées aux
               opérations ou procédures énumérées ci-dessus. Pour se connecter à
               la plate-forme DEF, vous pouvez utiliser n’importe quel navigateur
               (Opéra mini, Fire fox, Chrome...). Le lien d’accès est celui-ci :{" "}
-              <a href="https://def-rdc.com">https://def-rdc.com</a>
+              <a className="text-red-900" href="https://def-rdc.com">
+                https://def-rdc.com
+              </a>
             </p>
           </div>
         </section>
@@ -256,7 +267,7 @@ const Authentification = ({ handleSidebarMenu }) => {
         <section className="Section-paragraph flex justify-between flex-col mx-10 border-b-2 border-neutral-300">
           <div className="">
             <h2 id="Création-de-compte">Création d’un compte</h2>
-            <p>
+            <p className="w-[70%]">
               La Solution offre des interfaces d’enregistrement des nouveaux
               utilisateurs et leur donne un numéro DEF d’utilisateur et un mot
               de passe sécurisé par défaut modifiable par l’utilisateur.
@@ -268,30 +279,63 @@ const Authentification = ({ handleSidebarMenu }) => {
           <div className="Paragraph-Content">
             <h2 id="procédures">Procédures à suivre</h2>
 
-            <div className=" flex justify-between flex-row gap-50">
-              <h2 id="Création-espace-travail">
-                Création de l’espace de travail
-              </h2>
-              <img src={CreateCount} alt="Capture" width="500" height="500" />
+            <div className=" flex justify-between flex-row gap-70 pe-1 left-[40%]">
+              <div>
+                <h2 id="Création-espace-travail">
+                  Création de l’espace de travail
+                </h2>
+                <p>
+                  cliquer sur le bouton s'enregistrerpour lancer la création de
+                  l’espace de travail{" "}
+                </p>
+              </div>
+              <img
+                src={CreateCount}
+                alt="Capture"
+                className="w-[30%] h-[20%]  rounded-full "
+              />
             </div>
 
             <div className="flex justify-between flex-row gap-50">
-              <h2 id="Choix-catégorie-assujetti">
-                Choix de la catégorie de l’assujetti
-              </h2>
-              <img src={CatAssujetti} alt="Capture" width="500" height="500" />
+              <div>
+                <h2 id="Choix-catégorie-assujetti">
+                  Choix de la catégorie de l’assujetti
+                </h2>
+                <p>
+                  cliquer sur le bouton s'enregistrerpour lancer la création de
+                  l’espace de travail{" "}
+                </p>
+              </div>
+              <img
+                src={CatAssujetti}
+                alt="Capture"
+                className="w-[40%] h-[30%]  rounded-full"
+              />
             </div>
 
             <div className="flex justify-between flex-col mx-10 border-b-2 border-neutral-300">
               <h2 id="Personne-physique">Personne physique</h2>
-              <p>
+              <p className="w-[70%]">
                 Apres le choix de la catégorie de l’assujetti, si cette dernière
                 est une personne physique (commerçante ou non commerçante) ; il
                 est important de préciser que la procédure est la même.
               </p>
               <div className="flex justify-between flex-row gap-50">
-                <h3>Etape 1 : enregistrement de coordonnées</h3>
-                <img src={StorageData} alt="Capture" width="500" height="500" />
+                <div>
+                  <h3>Etape 1 : enregistrement de coordonnées</h3>
+                  <p className="w-[70%]   ">
+                    La personne physique commerciale ou non commerciale doit
+                    dans cette interface : renseigner une adresse mail et un
+                    numeor de téléphone valide, renseigner correctement son
+                    adresse physique personnelle
+                  </p>
+                </div>
+
+                <img
+                  src={StorageData}
+                  alt="StorageData"
+                  className="w-[30%] h-[20%]"
+                />
               </div>
 
               <div className="flex justify-between flex-row gap-50">
@@ -299,41 +343,55 @@ const Authentification = ({ handleSidebarMenu }) => {
                 <img
                   src={SelectNationnality}
                   alt="Capture"
-                  width="500"
-                  height="500"
+                  className="w-[30%] h-[20%] "
                 />
               </div>
 
               <div className="flex justify-between flex-row gap-50">
-                <h3>Assujetti de droit congolais</h3>
+                <div>
+                  <h3>Assujetti de droit congolais</h3>
+                  <p className="w-[70%]   ">
+                    Préciser si l'assujetti de droit congo est une filiale d'une
+                    entreprise etrangère ou non
+                  </p>
+                </div>
                 <img
                   src={AssujettiCongolais}
                   alt="Capture"
-                  width="500"
-                  height="500"
+                  className="w-[30%] h-[20%] "
                 />
               </div>
 
-              <div className="flex justify-between flex-row gap-50">
-                <h3>Assujetti de droit Etranger</h3>
+              <div className="flex justify-start flex-row gap-50">
+                <div>
+                  <h3>Assujetti de droit Etranger</h3>
+                  <p>
+                    Préciser si l'assujetti de droit etranger ayont une
+                    répresentation en RDC ou non
+                  </p>
+                </div>
                 <img
                   src={AssujettiEtranger}
                   alt="Capture"
-                  width="500"
-                  height="500"
+                  className="w-[30%] h-[20%] "
                 />
               </div>
 
               <div className="flex justify-between flex-row gap-50">
-                <h3>Etape 3 : Déclinaison de l'identité de la personne</h3>
+                <div>
+                  <h3>Etape 3 : Déclinaison de l'identité de la personne</h3>
+                  <p className="w-[70%]   ">
+                    Renseigner correctement votre identité puis clicquer sur le
+                    bouton blue "Soumettre le formulaire"
+                  </p>
+                </div>
                 <img
                   src={IdentitéPersonnelle}
                   alt="Capture"
-                  width="500"
-                  height="500"
+                  className="w-[30%] h-[20%] "
                 />
               </div>
-              <p>
+              <p className="w-[70%]   ">
                 N.B : Après avoir soumis le formulaire, le système génère de
                 manière automatique le nom d’utilisateur et le mot de passe par
                 défaut après l’enregistrement via l’adresse mail renseignée à
@@ -343,75 +401,115 @@ const Authentification = ({ handleSidebarMenu }) => {
 
             <div className="flex justify-between flex-col mx-10 border-b-2 border-neutral-300">
               <h2 id="Personne-morale">Personne morale</h2>
-              <p>
+              <p className="w-[70%]   ">
                 Apres le choix de la catégorie de l’assujetti, si cette dernière
                 est une personne morale (commerçante ou non commerçante) ; il
                 est important de préciser que la procédure est la même à la
                 première, deuxième et quatrième étape.
               </p>
               <div className="flex justify-between flex-row gap-50">
-                <h3 id="Choix de la catégorie de l’assujetti">
-                  Etape 1 : enregistrement de coordonnées
-                </h3>
-                <img src={StorageData} alt="Capture" width="500" height="500" />
+                <div>
+                  <h3 id="Choix de la catégorie de l’assujetti">
+                    Etape 1 : enregistrement de coordonnées
+                  </h3>
+                  <p className="w-[70%]   ">
+                    La personne morale commerçante ou non commerçante doit dans
+                    cette interface: renseigner une adresse mail et un numéro de
+                    téléphone valide, renseigner correctement une adresse
+                    physique personnelle
+                  </p>
+                </div>
+                <img
+                  src={StorageData}
+                  alt="Capture"
+                  className="w-[30%] h-[20%] "
+                />
               </div>
 
               <div className="flex justify-between flex-row gap-50">
-                <h3>Etape 2: choix de la nationalité</h3>
+                <div>
+                  <h3>Etape 2: choix de la nationalité</h3>
+                  <p className="w-[70%]   ">
+                    Clicquer sur le champs "Selectionncer la catégorie" puis
+                    choissez la nationalité de votre entreprise pour la
+                    personalisation de votre espace DEF
+                  </p>
+                </div>
+
                 <img
                   src={SelectNationnality}
                   alt="Capture"
-                  width="500"
-                  height="500"
+                  className="w-[30%] h-[20%] "
                 />
               </div>
 
               <div className="flex justify-between flex-row gap-50">
-                <h3>Assujetti de droit congolais</h3>
+                <div>
+                  <h3>Assujetti de droit congolais</h3>
+                  <p className="w-[70%]   ">
+                    Préciser si l'assujetti de droit congolais est une filiale
+                    d'une entreprise etrangère ou non
+                  </p>
+                </div>
+
                 <img
                   src={AssujettiCongolais}
                   alt="Capture"
-                  width="500"
-                  height="500"
+                  className="w-[30%] h-[20%] "
                 />
               </div>
 
               <div className="flex justify-between flex-row gap-50">
-                <h3>Assujetti de droit Etranger</h3>
+                <div>
+                  <h3>Assujetti de droit Etranger</h3>
+                  <p className="w-[70%]   ">
+                    Préciser si l'assujetti de droit de etranger ayant une
+                    répresentaion en RDC ou non
+                  </p>
+                </div>
+
                 <img
                   src={AssujettiEtranger}
                   alt="Capture"
-                  width="500"
-                  height="500"
+                  className="w-[30%] h-[20%] "
                 />
               </div>
 
-              <div className="flex justify-between flex-row gap-50">
+              <div className="flex justify-between flex-col gap-50">
                 <h3>Etape 3 : Déclinaison de l'identité de la personne</h3>
-                <div className="flex justify-between flex-col gap-50-image">
-                  <img src={PMC} alt="Capture" width="500" height="500" />
-                  <img src={PMNC} alt="Capture" width="500" height="500" />
+
+                <div className="flex justify-between flex-row gap-50">
+                  <p className="w-[70%]   ">
+                    Préciser si l'assujetti de droit de etranger ayant une
+                    répresentaion en RDC ou non
+                  </p>
+                  <div>
+                    <img src={PMC} alt="Capture" className="w-[40%] h-[50%] " />
+                    <img
+                      src={PMNC}
+                      alt="Capture"
+                      className="w-[40%] h-[50%] "
+                    />
+                  </div>
                 </div>
               </div>
 
-              <div className="flex justify-between flex-row gap-50">
+              <div className="flex justify-between flex-row gap-50 w-[70%]">
                 <h3>Etape 4 : déclinaison de l’identité</h3>
                 <div className="flex justify-between flex-col">
                   <img
                     src={DenominationEts}
                     alt="Capture"
-                    width="500"
-                    height="500"
+                    className="w-[30%] h-[20%] "
                   />
                   <img
                     src={StatutNotarie}
                     alt="Capture"
-                    width="500"
-                    height="500"
+                    className="w-[30%] h-[20%] "
                   />
                 </div>
               </div>
-              <p>
+              <p className="w-[70%]   ">
                 N.B : Après avoir soumis le formulaire, le système génère de
                 manière automatique le nom d’utilisateur et le mot de passe par
                 défaut après l’enregistrement via l’adresse mail renseignée à
@@ -427,13 +525,19 @@ const Authentification = ({ handleSidebarMenu }) => {
         >
           <h2 id="connexion">Connexion au système</h2>
           <div className="flex justify-between flex-row gap-50">
-            <p>
+            <p className="w-[70%]   ">
               Après l’enregistrement dans le DEF, le nom d’utilisateur et le mot
               de passe par défaut reçus via le mail doivent être renseignés
               respectivement dans les champs cidessous pour se connecter
             </p>
 
-            <img src={Connexion} alt="Capture" width="500" height="500" />
+            <img
+              src={Connexion}
+              alt="Capture"
+              width="500"
+              height="500"
+              className="w-[30%] h-[20%] "
+            />
           </div>
         </section>
       </div>

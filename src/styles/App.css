@@ -2,34 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+strong{
+  @apply  text-blue-900;
+}
+
 
 @media screen and (max-width: 768px){
-  .showBar,
+  .showBar 
   .sideBar-link
   {
-    @apply flex block fixed right-[100vw] bottom-0  py-2 px-2 visible ;  
+      @apply flex block fixed w-screen right-0 bottom-0  py-2 px-2 visible ;  
+  }  
+  .sideBar-link {
+    @apply flex flex-col items-center justify-center fixed right-[-500hv] left-0  w-full h-[200vw]  shadow-md bg-[#0D1426] text-stone-400 fixed z-50 py-12 
+     invisible;
   }
-  .sideBar-link{
-    @apply flex flex-col items-center justify-center fixed right-0 bottom-0  w-full h-full  shadow-md bg-[#0D1426] text-stone-400 fixed z-50 py-12 invisible;
+  NavBar {
+    @apply hidden;
   }
   .logo{
     @apply  z-50 fixed;
   }
   .button-burger{
-    @apply block fixed right-1  top-1 z-50;
+    @apply block fixed left-1  top-[-16px] z-50;
   }
   button-burger:hover{
-    @apply cursor-pointer;
+    @apply cursor-pointer rounded-full bg-stone-400;;
   }
   
   .burger-bar,
   .burger-bar::before,
   .burger-bar::after{
-    @apply block w-[40px] h-[3px] relative bg-white   rounded-lg z-[1];
+    @apply block w-[40px] h-[3px] relative bg-black rounded-lg z-[1];
   }
    .burger-bar::before,
   .burger-bar::after{
-    @apply content-[''] absolute left-0 z-50;
+    @apply content-[''] absolute left-0  z-50;
     
   }
   

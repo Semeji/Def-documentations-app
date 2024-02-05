@@ -6,7 +6,7 @@ const NavBar = () => {
     <nav className="">
       <div className=" flex flex-row justify-between gap-12 mx-15">
         <MenuBurger />
-        <ul className="flex justify-end text flex-row gap-10 py-10 px-10  border-b-2 border-neutral-300  text-blue-700 fixed bg-white right-16 top-[-0.5%] font-mono w-[78%]">
+        <ul className="flex justify-end text flex-row gap-10 py-5 px-6  border-b-2 border-neutral-300  text-blue-700 fixed bg-white right-[5%] top-[-0.5%] font-mono  w-[75%]">
           <li>
             <a href="#">Guide utilisateur</a>
           </li>

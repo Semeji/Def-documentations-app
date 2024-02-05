@@ -1,10 +1,18 @@
 {
   "files": {
+    "src/pages/SideBar.jsx": [
+      {
+        "id": "25a412f7-ff38-4f0b-8d7b-3cb3922ae24a",
+        "line": 1,
+        "version": 3886,
+        "index": 0
+      }
+    ],
     "src/styles/index.css": [
       {
         "id": "4df2894d-a7b6-4f7b-bb7b-2dd440e07fe3",
         "line": 1,
-        "version": 2338,
+        "version": 2448,
         "index": 0
       }
     ]

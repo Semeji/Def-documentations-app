@@ -28,34 +28,30 @@ function SideBar() {
     }
   };
 
-  // const handleSidebarMenu = () => {
-  //   const SidebarMenu = document.getElementById("exemple");
-  //   if (window.scrollY > 0) {
-  //     SidebarMenu.classList.add("scrolled");
-  //   } else {
-  //     SidebarMenu.classList.remove("scrolled");
-  //   }
-  // };
-
   // Sélectionnez l'élément avec l'ID spécifié
-  const pageTitle = document.querySelector("#préambule");
-  const navLink = document.querySelector("#préambule");
-
+  // const sections = document.querySelectorAll("section");
+  // const navLink = document.querySelector("#préambule");
+  // console.log("tttttttttttt", navLink);
+  // const links = document.querySelectorAll('NavLink');
+  // console.log("moi et toi", links);
   // Ajoutez un écouteur d'événement pour détecter le scroll de la page
-  const handleScroll = document.addEventListener("scroll", () => {
-    // Récupérez la position de l'élément par rapport au haut de la page
-    // const position =
-    //   PageTitle.getBoundingClientRect().getAttribute("préambule");
-    // getBoundingClientRect();
-    // Vérifiez si l'élément est à l'endroit souhaité
-    if (pageTitle.id === navLink.id) {
-      // Ajoutez une classe CSS pour changer la couleur du navLink
-      navLink.classList.add("text-black-700");
-    } else {
-      // Supprimez la classe CSS pour rétablir la couleur par défaut du navLink
-      navLink.classList.remove("text-lime-600");
-    }
-  });
+  // const handleScroll = document.addEventListener("scroll", () => {
+  // Récupérez la position de l'élément par rapport au haut de la page
+  // const position = sections
+  //   .getBoundingClientRect()
+  //   .getAttribute("section");
+  // getBoundingClientRect();
+  // Vérifiez si l'élément est à l'endroit souhaité
+  // sections.forEach((section) => {
+  //   if (position) {
+  // Ajoutez une classe CSS pour changer la couleur du navLink
+  //   oneLink.classList.add("text-red-700");
+  // } else {
+  // Supprimez la classe CSS pour rétablir la couleur par défaut du navLink
+  //       navLink.classList.remove("text-blue-600");
+  //     }
+  //   });
+  // });
   const handleLinkClick = (section) => {
     const element = document.getElementById(section);
     element.scrollIntoView({ behavior: "smooth" });
@@ -63,14 +59,14 @@ function SideBar() {
 
   return (
     <div
-      className={`flex align-center flex-col text-black border-r-2 border-neutral-300 gap-3 px-1 w-screen h-screen w-[20%] px-8 font-mono sideBar-link ${
+      className={`flex align-center flex-col text-black border-r-2 border-neutral-300  w-[25%] h-full w-[270px] h-[57px] px-8 font-mono fixed  top-0 left-0 gap-50 bg-white sideBar-link ${
         isClicked ? "sideBar-link" : "hide-Bar"
       }`}
     >
       <div className="sideBar-header  ">
         <div className="flex justify-between flex-col gap-[10px] px-1">
-          <a href="#">
-            <img src={logo} alt="DGI LOGO" />
+          <a className="flex px-3 items-center min-h-[76px] " href="#">
+            <img src={logo} alt="DGI LOGO" className="w-[200px] h-[57px] " />
           </a>
 
           <div className="dark-mode">
@@ -121,7 +117,7 @@ function SideBar() {
                       to="/authentification"
                       onClick={() => handleLinkClick("préambule")}
                       id="préambule"
-                      onScroll={handleScroll}
+                      className="link"
                     >
                       Préambule
                     </NavLink>
@@ -203,6 +199,7 @@ function SideBar() {
                     <NavLink
                       to="/authentification"
                       onClick={() => handleLinkClick("connexion")}
+                      className="link"
                     >
                       Connexion au système
                     </NavLink>

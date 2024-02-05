@@ -9,7 +9,7 @@
 }
 input{
   background:white;
-  color:#5a5858
+  color:#5a5858;
   border:none;
   padding:5px;
   
@@ -19,6 +19,9 @@ input{
     text-decoration: none;
      color:black;
   }
+.exemple{
+  color:red;
+}
 ul li navLink{
    color: black;
 
@@ -89,19 +92,20 @@ main-content{
   margin: 10px;
   position:all-scroll;
 }
+
 .sideBarBtn-search{
   
   border-radius: 50px black;
   display:flex;
   flex-direction:row;
 }
-.layout{
+/* .layout{
   display:flex;
-  justify-content:space-around;
+  justify-content:flext-ends;
   flex-direction:row;
-  gap:25%;
+  gap:30%;
   
-}
+} */
 .Content-image{
   display:flex;
   flex-direction:column;
@@ -112,6 +116,7 @@ main-content{
   flex-direction: column;
   gap: 10px;
   padding:10px;
+  
 }
 
 .Section-paragraph{
