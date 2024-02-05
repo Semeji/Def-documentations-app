@@ -59,12 +59,12 @@ function SideBar() {
 
   return (
     <div
-      className={`flex align-center flex-col text-black border-r-2 border-neutral-300  w-[25%] h-full w-[270px] h-[57px] px-8 font-mono fixed  top-0 left-0 gap-50 bg-white sideBar-link ${
+      className={`flex align-center flex-col text-black border-r-2 border-neutral-300  w-[25%] h-full w-[270px] h-[57px] px-8 py-8 font-mono fixed  top-0 left-0 gap-50 bg-white sideBar-link ${
         isClicked ? "sideBar-link" : "hide-Bar"
       }`}
     >
       <div className="sideBar-header  ">
-        <div className="flex justify-between flex-col gap-[10px] px-1">
+        <div className="flex justify-between flex-row gap-[10px] px-1">
           <a className="flex px-3 items-center min-h-[76px] " href="#">
             <img src={logo} alt="DGI LOGO" className="w-[200px] h-[57px] " />
           </a>
@@ -90,23 +90,24 @@ function SideBar() {
             </label>
           </div>
         </div>
-        <div className="sideBarBtn-search">
+        <div className="sideBarBtn-search flex flex-row gap-2 order-r-2 border-neutral-300 rounded-full">
           <img src={searchIcon} alt="Seach Icon  " />
           <input type="text" placeholder="Search pages" />
         </div>
       </div>
 
-      <ul className="sideBar-link  nav-limks ">
+      <ul className="sideBar-link  nav-limks py-8 ">
         <a className="logo hidden" href="#">
           <img src={lOGODGI} alt="DGI LOGO" />
         </a>
 
         <li>
           <NavLink to="/authentification">
-            <div className="nav-limk">
+            <div className="nav-limk ">
               <p
                 onClick={handleMenuClick}
                 id="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 "
+                className="clicked text-color-[#5469D4] hover:bg-[#5469D4] hover:opacity-50  font-BlinkMacSystemFont rounded-[5%]"
               >
                 Authentification
               </p>
