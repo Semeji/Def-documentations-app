@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 strong{
-  @apply  text-blue-900;
+  @apply  text-indigo-900;
 }
 
 
@@ -27,8 +27,11 @@ strong{
     @apply block fixed left-1  top-[-16px] z-50;
   }
   button-burger:hover{
-    @apply cursor-pointer rounded-full bg-stone-400;;
+    @apply cursor-pointer rounded-full bg-stone-400;
   }
+.clicked:hover{
+  @apply bg-sky-500;
+}
   
   .burger-bar,
   .burger-bar::before,

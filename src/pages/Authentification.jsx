@@ -18,13 +18,28 @@ const Authentification = () => {
       const navLink = document.querySelector(".link");
       const section = document.querySelector("#préambule");
       console.log("moi et toi", section);
-      if (window.scrollY > section.offsetTop) {
-        navLink.style.backgroundColor = "red";
+      if (window.scrollY <= section.offsetTop) {
+        navLink.classList.add("text-indigo-500"); // Ajoute la classe Tailwind CSS "bg-red-500"
       } else {
-        navLink.style.backgroundColor = "blue";
+        navLink.classList.remove("text-indigo-500"); // Supprime la classe Tailwind CSS "bg-red-500"
       }
     });
   };
+
+  const handleScrollScreens = () => {
+    document.addEventListener("scroll", function () {
+      const sectionParagraph = document.querySelector(".createCount");
+
+      const sectionImage = document.querySelector("#sectionImage");
+      console.log("je taime", sectionImage);
+      if (window.scrollY > sectionParagraph.offsetTop) {
+        sectionImage.style.visibility = "visible";
+      } else {
+        sectionImage.style.visibility = "hidden";
+      }
+    });
+  };
+
   return (
     <>
       <div className="Authentification flex justify-between flex-col right-0 gap-5 px-5 h-screen w-[55%]">
@@ -283,7 +298,11 @@ const Authentification = () => {
 
             <div className=" flex justify-between flex-row gap-70 pe-1 left-[40%]">
               <div>
-                <h2 id="Création-espace-travail">
+                <h2
+                  id="Création-espace-travail"
+                  className="createCount"
+                  onClick={handleScrollScreens}
+                >
                   Création de l’espace de travail
                 </h2>
                 <p>
@@ -311,7 +330,7 @@ const Authentification = () => {
               <img
                 src={CatAssujetti}
                 alt="Capture"
-                className="w-[40%] h-[30%]  rounded-full"
+                className="w-[40%] h-[30%] "
               />
             </div>
 
@@ -533,13 +552,7 @@ const Authentification = () => {
               respectivement dans les champs cidessous pour se connecter
             </p>
 
-            <img
-              src={Connexion}
-              alt="Capture"
-              width="500"
-              height="500"
-              className="w-[30%] h-[20%] "
-            />
+            <img src={Connexion} alt="Capture" className="w-[30%] h-[20%] " />
           </div>
         </section>
       </div>

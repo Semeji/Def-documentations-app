@@ -13,31 +13,57 @@ import StatutNotarie from "../images/StatutNotarie.png";
 import Connexion from "../images/Connexion.png";
 
 const Screens = () => {
-  const handleScroll = () => {
-    document.addEventListener("scroll", function () {
-      const sectionParagraph = document.querySelector(".Procedures");
-      const sectionImage = document.querySelector("#préambule");
-      console.log("je t'aime", sectionImage);
-      if (window.scrollY > sectionParagraph.offsetTop) {
-        sectionImage.style.visibility = "visible";
-      } else {
-        sectionImage.style.visibility = "hidden";
-      }
-    });
-    s;
-  };
-
   return (
     <div className="position right-0">
       <h1>Screens</h1>
-      <section className="sectionImage">
+      <section id="sectionImage">
         <img
           src={CreateCount}
           alt="Capture"
           className="w-[30%] h-[30%]  "
-          onScroll={handleScroll}
-          id="Image-CreateCount"
+          id="hidden"
         />
+        <img src={CatAssujetti} alt="Capture" className="w-[30%] h-[30%]  " />
+        <img
+          src={AssujettiEtranger}
+          alt="Capture"
+          className="w-[30%] h-[20%] "
+        />
+        <img
+          src={IdentitéPersonnelle}
+          alt="Capture"
+          className="w-[30%] h-[20%] "
+        />
+        <img src={StorageData} alt="Capture" className="w-[30%] h-[20%] " />
+        <img
+          src={SelectNationnality}
+          alt="Capture"
+          className="w-[30%] h-[20%] "
+        />
+        <img
+          src={AssujettiCongolais}
+          alt="Capture"
+          className="w-[30%] h-[20%] "
+        />
+        <img
+          src={AssujettiEtranger}
+          alt="Capture"
+          className="w-[30%] h-[20%] "
+        />
+        <img src={PMC} alt="Capture" className="w-[40%] h-[50%] " />
+        <img
+          src={PMNC}
+          alt="Capture"
+          className="w-[40%] h-[50%] "
+        />
+
+        <img
+          src={Connexion}
+          alt="Capture"  
+          className="w-[30%] h-[20%] "
+        />
+
+        
       </section>
     </div>
   );
