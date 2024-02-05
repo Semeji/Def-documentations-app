@@ -8,6 +8,7 @@ import { useState } from "react";
 function SideBar() {
   const [isClicked, setIsClicked] = useState(false);
   const handleMenuClick = () => {
+    
     setIsClicked(!isClicked);
   };
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -90,7 +91,7 @@ function SideBar() {
             </label>
           </div>
         </div>
-        <div className="sideBarBtn-search flex flex-row gap-2 order-r-2 border-neutral-300 rounded-full">
+        <div className="sideBarBtn-search flex flex-row gap-2 order-r-2 border-neutral-300 rounded-full  ">
           <img src={searchIcon} alt="Seach Icon  " />
           <input type="text" placeholder="Search pages" />
         </div>
@@ -107,7 +108,7 @@ function SideBar() {
               <p
                 onClick={handleMenuClick}
                 id="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 "
-                className="clicked text-color-[#5469D4] hover:bg-[#5469D4] hover:opacity-50  font-BlinkMacSystemFont rounded-[5%]"
+                className=" text-indigo-700  hover:bg-indigo-500/[.2] hover:opacity-50 hover:text-black hover:bold  font-mono rounded-[5%] text-base "
               >
                 Authentification
               </p>
@@ -213,31 +214,41 @@ function SideBar() {
 
         <li>
           <NavLink to="/administrateur">
-            <p>Administrateur</p>
+            <p className="text-indigo-700  hover:bg-indigo-500/[.2] hover:opacity-50 hover:text-black hover:bold  font-mono rounded-[5%] text-base">
+              Administrateur
+            </p>
           </NavLink>
         </li>
 
         <li>
           <NavLink to="/comptabilité">
-            <p>Comptabilité</p>
+            <p className="text-indigo-700  hover:bg-indigo-500/[.2] hover:opacity-50 hover:text-black hover:bold  font-mono rounded-[5%] text-base">
+              Comptabilité
+            </p>
           </NavLink>
         </li>
 
         <li>
           <NavLink to="/Fiscalité">
-            <p>Fiscalité</p>
+            <p className="text-indigo-700  hover:bg-indigo-500/[.2] hover:opacity-50 hover:text-black hover:bold  font-mono rounded-[5%] text-base">
+              Fiscalité
+            </p>
           </NavLink>
         </li>
 
         <li>
           <NavLink to="/personnel">
-            <p>Personnel</p>
+            <p className="text-indigo-700  hover:bg-indigo-500/[.2] hover:opacity-50 hover:text-black hover:bold  font-mono rounded-[5%] text-base">
+              Personnel
+            </p>
           </NavLink>
         </li>
 
         <li>
           <NavLink to="/stock">
-            <p>Stock</p>
+            <p className="text-indigo-700  hover:bg-indigo-500/[.2] hover:opacity-50 hover:text-black hover:bold  font-mono rounded-[5%] text-base">
+              Stock
+            </p>
           </NavLink>
         </li>
       </ul>
