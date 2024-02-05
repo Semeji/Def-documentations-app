@@ -31,10 +31,10 @@ const Authentification = () => {
         <section
           className="flex justify-between flex-col mx-5 border-b-2 border-neutral-300"
           id="préambule"
-          onScroll={handleScroll}
+          onClick={handleScroll}
         >
-          <div className="">
-            <h2 className="bold text-2xl text-blue-700" id="préambule">
+          <div className="py-4">
+            <h2 className="bold text-2xl text-indigo-400;" id="préambule">
               Préambule
             </h2>
             <p className="w-[70%]">
@@ -249,7 +249,9 @@ const Authentification = () => {
 
         <section className="Section-paragraph flex justify-between flex-col mx-10 border-b-2 border-neutral-300">
           <div className="">
-            <h2 id="Accès-système">Accès au système</h2>
+            <h2 id="Accès-système" className="text-indigo-700">
+              Accès au système
+            </h2>
             <p className="w-[70%]">
               La solution a l’avantage d’un accès aisé grâce à un lien public,
               d’un enregistrement aisé des utilisateurs personnes physiques et
@@ -275,7 +277,7 @@ const Authentification = () => {
           </div>
         </section>
 
-        <section className=" flex justify-between flex-col mx-10 border-b-2 border-neutral-300">
+        <section className=" flex justify-between flex-col mx-10 border-b-2 border-neutral-300 Procedures">
           <div className="Paragraph-Content">
             <h2 id="procédures">Procédures à suivre</h2>
 
